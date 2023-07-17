@@ -1,0 +1,7 @@
+services:
+  app:
+    image: bellsoft/liberica-openjdk-alpine:11.0.16.1-1
+    command: javac -sourcepath src -d target/classes src/com/pockocmoc/notesapp/models/Note.java src/com/pockocmoc/notesapp/services/NoteService.java src/com/pockocmoc/notesapp/Main.java
+    volumes:
+      - ./target:/target
+      - ./src:/src

@@ -1,0 +1,9 @@
+services:
+  app:
+    image: bellsoft/liberica-openjdk-alpine:11.0.16.1-1
+    stdin_open: false # docker run -i
+    tty: true        # docker run -t
+    command: java -cp target/classes com.pockocmoc.notesapp.Main
+    volumes:
+      - ./target:/target
+
